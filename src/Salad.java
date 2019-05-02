@@ -5,43 +5,46 @@ public class Salad {
     private Vegetable[] vegetables;
     private int counter = 0;
 
-    public Salad(int numOfIngredients){
+    public Salad(int numOfIngredients) {
         this.numOfIngredients = numOfIngredients;
         vegetables = new Vegetable[numOfIngredients];
     }
 
-    public void addVegetable(int calories, String nameOfVegetable, int daysFromHarvesting){
-        if (counter < numOfIngredients){
+    public void addVegetable(int calories, String nameOfVegetable, int daysFromHarvesting) {
+        if (counter < numOfIngredients) {
             vegetables[counter++] = new Vegetable(calories, nameOfVegetable, daysFromHarvesting);
-        }else {
+        } else {
             System.out.println("The plate is full!");
         }
     }
-    public void addCucurbitaceae(int calories, String nameOfVegetable, int daysFromHarvesting, String origin){
-        if (counter < numOfIngredients){
+
+    public void addCucurbitaceae(int calories, String nameOfVegetable, int daysFromHarvesting, String origin) {
+        if (counter < numOfIngredients) {
             vegetables[counter++] = new Cucurbitaceae(calories, nameOfVegetable, daysFromHarvesting, origin);
-        }else {
+        } else {
             System.out.println("The plate is full!");
         }
     }
-    public void addSolanaceae(int calories, String nameOfVegetable, int daysFromHarvesting, String origin){
-        if (counter < numOfIngredients){
+
+    public void addSolanaceae(int calories, String nameOfVegetable, int daysFromHarvesting, String origin) {
+        if (counter < numOfIngredients) {
             vegetables[counter++] = new Solanaceae(calories, nameOfVegetable, daysFromHarvesting, origin);
-        }else {
+        } else {
             System.out.println("The plate is full!");
         }
     }
-    public void addLeguminous(int calories, String nameOfVegetable, int daysFromHarvesting, String origin){
-        if (counter < numOfIngredients){
+
+    public void addLeguminous(int calories, String nameOfVegetable, int daysFromHarvesting, String origin) {
+        if (counter < numOfIngredients) {
             vegetables[counter++] = new Leguminous(calories, nameOfVegetable, daysFromHarvesting, origin);
-        }else {
+        } else {
             System.out.println("The plate is full!");
         }
     }
 
 
     @Override
-    public String toString(){
+    public String toString() {
         String res = "Amount of salad ingredients: " + counter + "\n";
         for (int i = 0; i < counter; i++) {
             res += vegetables[i].toString() + '\n';
@@ -49,23 +52,24 @@ public class Salad {
         return res;
     }
 
-    public int TotalNumberOfCalories(){
+    public int TotalNumberOfCalories() {
         int totalNumberOfCalories = 0;
         for (int i = 0; i < vegetables.length; i++) {
             totalNumberOfCalories += vegetables[i].getСalories();
-            }
+        }
         return totalNumberOfCalories;
     }
 
-    public void findVegetable(int from, int to){
+    public void findVegetable(int from, int to) {
         for (int i = 0; i < vegetables.length; i++) {
-            if(vegetables[i].getСalories() >= from && vegetables[i].getСalories() <= to){
+            if (vegetables[i].getСalories() >= from && vegetables[i].getСalories() <= to) {
                 System.out.println(vegetables[i]);
             }
 
         }
     }
-    public void sortWithFreshness(){
+
+    public void sortWithFreshness() {
         Arrays.sort(vegetables, new ComparatorByFreshness());
     }
 

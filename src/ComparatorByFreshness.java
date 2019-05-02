@@ -1,7 +1,6 @@
 import java.util.Comparator;
 
 
-
 public class ComparatorByFreshness implements Comparator<Vegetable> {
 
     @Override
