@@ -3,9 +3,8 @@ public class Cucurbitaceae extends Vegetable{
 
     private String origin;
     public Cucurbitaceae(int calories, String nameOfVegetable, int daysFromHarvesting, String origin){
-        super(calories, nameOfVegetable,daysFromHarvesting, canBeStored);
+        super(calories, nameOfVegetable,daysFromHarvesting);
         this.origin = origin;
-        this.canBeStored = 31;
     }
 
     public String getOrigin() {

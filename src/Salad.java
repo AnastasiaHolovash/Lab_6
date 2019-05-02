@@ -10,9 +10,9 @@ public class Salad {
         vegetables = new Vegetable[numOfIngredients];
     }
 
-    public void addVegetable(int calories, String nameOfVegetable, int daysFromHarvesting, int canBeStored){
+    public void addVegetable(int calories, String nameOfVegetable, int daysFromHarvesting){
         if (counter < numOfIngredients){
-            vegetables[counter++] = new Vegetable(calories, nameOfVegetable, daysFromHarvesting, canBeStored);
+            vegetables[counter++] = new Vegetable(calories, nameOfVegetable, daysFromHarvesting);
         }else {
             System.out.println("The plate is full!");
         }

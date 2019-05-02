@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Salad salad = new Salad(5);
-        salad.addVegetable(25, "Сabbage ", 2, 25);
+        salad.addVegetable(25, "Сabbage ", 2);
 //        salad.addVegetable(15, "Lily", 3);
         salad.addCucurbitaceae(15, "Cucumber",1, "India");
 //        salad.addVegetable(9, "Carnation", 6);

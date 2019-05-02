@@ -3,12 +3,11 @@ public class Vegetable {
     private int calories;
     private String nameOfVegetable;
     private int daysFromHarvesting;
-    public int canBeStored;
-    public Vegetable(int calories, String nameOfVegetable, int daysFromHarvesting, int canBeStored){
+    public Vegetable(int calories, String nameOfVegetable, int daysFromHarvesting){
         this.calories = calories;
         this.nameOfVegetable = nameOfVegetable;
         this.daysFromHarvesting = daysFromHarvesting;
-        this.canBeStored = canBeStored;
+
     }
 
     public int getСalories() {
